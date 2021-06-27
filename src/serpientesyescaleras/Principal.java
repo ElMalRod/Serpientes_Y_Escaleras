@@ -7,7 +7,7 @@ package serpientesyescaleras;
 
 /**
  *
- * @author emili
+ * @author Emilio Maldonado
  */
 public class Principal {
 
@@ -16,6 +16,8 @@ public class Principal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Inicio I = new Inicio();
+        I.setVisible(true);
     }
     
 }
