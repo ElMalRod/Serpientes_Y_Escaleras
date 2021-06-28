@@ -5,12 +5,15 @@
  */
 package Jugador;
 
+import Tablero.JuegoPrincipal;
+import javax.swing.JTextField;
+
 /**
  *
  * @author emili
  */
 public class IngresoJugador extends javax.swing.JFrame {
-
+     String [] NombreJugadores = new String[5];
     /**
      * Creates new form IngresoJugador
      */
@@ -117,9 +120,38 @@ public class IngresoJugador extends javax.swing.JFrame {
     }//GEN-LAST:event_txtJugador3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        NombreJugadores[0]=txtJugador1.getText();
+        NombreJugadores[1]=txtJugador2.getText();
+        NombreJugadores[2]=txtJugador3.getText();
+        NombreJugadores[3]=txtJugador4.getText();
+        JuegoPrincipal JP = new JuegoPrincipal();
+        JP.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    public static JTextField getTxtJugador1() {
+        return txtJugador1;
+    }
+
+    public static JTextField getTxtJugador2() {
+        return txtJugador2;
+    }
+
+    public static JTextField getTxtJugador3() {
+        return txtJugador3;
+    }
+
+    public static JTextField getTxtJugador4() {
+        return txtJugador4;
+    }
+     
+    public String[] getNombreJugadores() {
+        return NombreJugadores;
+    }
+
+   
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -163,9 +195,9 @@ public class IngresoJugador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtJugador1;
-    private javax.swing.JTextField txtJugador2;
-    private javax.swing.JTextField txtJugador3;
-    private javax.swing.JTextField txtJugador4;
+    public static javax.swing.JTextField txtJugador1;
+    public static javax.swing.JTextField txtJugador2;
+    public static javax.swing.JTextField txtJugador3;
+    public static javax.swing.JTextField txtJugador4;
     // End of variables declaration//GEN-END:variables
 }

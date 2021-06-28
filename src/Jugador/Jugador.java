@@ -93,11 +93,6 @@ public class Jugador {
      * Metodo para Agregar jugador , los agrega a el vector Jugador
      */
 
-    public void agregarJugador(Jugador[] listado) {
-        String nombreJugador = "";
-        nombreJugador = leerDatos.ingresarString("Ingrese el nombre del Jugador");
-        listado[contadorJugadores] = new Jugador(0, nombreJugador, 0);
-        contadorJugadores++;
-    }
+   
 
 }
