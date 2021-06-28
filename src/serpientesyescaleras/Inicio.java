@@ -5,6 +5,9 @@
  */
 package serpientesyescaleras;
 
+import Jugador.IngresoJugador;
+import Tablero.JuegoPrincipal;
+
 /**
  *
  * @author emili
@@ -16,6 +19,7 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -28,12 +32,43 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        btingresar = new javax.swing.JButton();
+        btSalir = new javax.swing.JButton();
+        btJuego = new javax.swing.JButton();
+        btEstadisticas = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btingresar.setText("Ingresa Jugador");
+        btingresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btingresarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 220, 20));
+
+        btSalir.setText("Salir");
+        btSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSalirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 220, 20));
+
+        btJuego.setText("Iniciar Juego");
+        btJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btJuegoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btJuego, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 220, 20));
+
+        btEstadisticas.setText("Estadisticas");
+        jPanel1.add(btEstadisticas, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 220, 20));
 
         jLabel2.setFont(new java.awt.Font("Montserrat", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -56,6 +91,22 @@ public class Inicio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btJuegoActionPerformed
+        // TODO add your handliJng code here:
+        JuegoPrincipal PJ = new JuegoPrincipal();
+        PJ.setVisible(true);
+    }//GEN-LAST:event_btJuegoActionPerformed
+
+    private void btSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btSalirActionPerformed
+
+    private void btingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btingresarActionPerformed
+        // TODO add your handling code here:
+        IngresoJugador IJ = new IngresoJugador ();
+        IJ.setVisible(true);
+    }//GEN-LAST:event_btingresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,6 +144,10 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btEstadisticas;
+    private javax.swing.JButton btJuego;
+    private javax.swing.JButton btSalir;
+    private javax.swing.JButton btingresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
