@@ -74,25 +74,7 @@ public class Jugador {
         this.partidasPerdidas = partidasPerdidas;
     }
 
-    /**
-     * Metodo listado de jugador , Imprime los jugadores ingresados en el Vector
-     */
-    public void listadoJugadores(Jugador[] listadoJugadores) {
-
-        for (int i = 0; i < listadoJugadores.length; i++) {
-            if (listadoJugadores[i] != null) {
-                System.out.println((i + 1) + ". " + listadoJugadores[i].datosJugador());
-            } else {
-                System.out.println(i + " ------Sin Jugador------");
-            }
-        }
-
-    }
-
-    /**
-     * Metodo para Agregar jugador , los agrega a el vector Jugador
-     */
-
+ 
    
 
 }
