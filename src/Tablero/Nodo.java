@@ -9,6 +9,10 @@ package Tablero;
  *
  * @author Emilio Maldonado
  */
+
+/*
+ Clase Nodo que acompaña a la lista
+*/
 public class Nodo<T> {
 
     private Nodo<T> Ant;

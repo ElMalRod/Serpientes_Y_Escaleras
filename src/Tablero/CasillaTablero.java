@@ -12,6 +12,11 @@ import static javax.swing.SwingConstants.TOP;
  *
  * @author Emilio Maldonado
  */
+
+/*
+Esta clase define el tipo de la casilla y dependiendo de eso ingresa una imagen en la casilla
+*/
+
 public class CasillaTablero extends JLabel {
 
     static final int[] tamañoImagenes = {20, 20};

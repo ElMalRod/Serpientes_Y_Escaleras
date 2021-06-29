@@ -13,6 +13,10 @@ import javax.swing.ImageIcon;
  *
  * @author Emilio Maldonado
  */
+
+/*
+ Esta Clase Determina la escala de la imagen dependiendo del tipo de casilla que sea
+*/
 public class Rutinas {
 
     public static ImageIcon AjustarImagen(String ico, int Ancho, int Alto) {
@@ -25,8 +29,6 @@ public class Rutinas {
     static Random R = new Random();
     static boolean[] Sexo = {false, false, false, true, false, false,
         false, true, true};
-
-    
 
     public static String PonCeros(int Valor, int Tamaño) {
         String Texto = Valor + "";
@@ -44,5 +46,4 @@ public class Rutinas {
         return R.nextInt(Fin - Ini + 1) + Ini;
     }
 
-   
-    }
+}

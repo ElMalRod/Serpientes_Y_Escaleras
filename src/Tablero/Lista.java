@@ -9,6 +9,10 @@ package Tablero;
  *
  * @author Emilio Maldonado
  */
+
+/*
+Clase en la que se almacenan los nodos de los Jugadores y el Tablero
+*/
 public class Lista<T> {
 
     private Nodo<T> Frente;

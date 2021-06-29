@@ -46,8 +46,9 @@ public class JuegoPrincipal extends JFrame implements ActionListener {
 
     Nodo<CasillaTablero>[] jugadores;
 
-//    NodoDBL<Casilla>[] jugadores = new NodoDBL[new Random().nextInt(10 - 2 + 1) + 2];
-//    NodoDBL<Casilla>[] jugadores = Rutinas.nextInt(2, 10:)
+    /*
+     Metodo que inicializa el juego y carga variables
+    */
     public JuegoPrincipal() {
         super(" ");
         setSize(675, 600);
@@ -73,8 +74,6 @@ public class JuegoPrincipal extends JFrame implements ActionListener {
             jugadores = new Nodo[CantidadAux2];
         }
 
-        // Generar jugadores
-//        cantidadJugadores = Rutinas.nextInt(2, 10);
         title = new JLabel("Serpientes y Escaleras");
         title.setBounds(527, 50, 150, 35);
         title.setForeground(Color.BLUE);
@@ -150,7 +149,9 @@ public class JuegoPrincipal extends JFrame implements ActionListener {
             return;
         }
     }
-
+    /*
+    Metodo para tirar los dados e indica las posiciones que tiene que avanzar cada jugador
+    */
     private void tirarDados() {
         boolean juegoCompletado = false;
         Nodo<CasillaTablero> posicionActual = null;
@@ -243,7 +244,9 @@ public class JuegoPrincipal extends JFrame implements ActionListener {
         iterador = ((iterador + 1) == CantidadTotalJugadores) ? 0 : (iterador + 1);
 
     }
-
+    /*
+    Metodo de Espera para actualizar los movimientos de los juagadores
+    */
     private void esperar() {
         try {
             Thread.sleep(800);
@@ -251,19 +254,27 @@ public class JuegoPrincipal extends JFrame implements ActionListener {
             Logger.getLogger(JuegoPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    /*
+     Metodo que genera las Serpientes 
+    */
 
     private int SerpientesAlAzar() {
         int Serpientes = 0;
         Serpientes = (int) (Math.random() * 7 + 1);
         return Serpientes;
     }
+    /*
+    Metodo que genera las Escaleras
+    */
 
     private int EscalerasAlAzar() {
         int Escaleras = 0;
         Escaleras = (int) (Math.random() * 7 + 1);
         return Escaleras;
     }
-
+    /*
+     Crea una Clase tablero que extiende de Panel para generar los Botones
+    */
     private class Tablero extends JPanel {
 
         Lista<CasillaTablero> tablero;
@@ -274,7 +285,9 @@ public class JuegoPrincipal extends JFrame implements ActionListener {
 //            setBackground(Color.WHITE);
             setVisible(true);
         }
-
+        /*
+        Metodo para Generar el tablero
+        */
         private void generarTablero() {
             // Crear tablero original
             tablero = new Lista<>();
@@ -295,6 +308,9 @@ public class JuegoPrincipal extends JFrame implements ActionListener {
                 add(aux.Info);
             }
         }
+        /*
+          Metodo que genera el tipo de casillas del tablero
+        */
 
         private void generarCasilla(Lista<CasillaTablero> tablero, char tipoCasilla, int limiteInferior, int limiteSuperior) {
             int nodoValido = new Random().nextInt(limiteSuperior - limiteInferior + 1) + limiteInferior;

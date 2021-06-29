@@ -9,6 +9,9 @@ package Tablero;
  *
  * @author Emilio Maldonado
  */
+/* Clase para determinar tipo de casilla, Numero de casilla , posicion 
+//
+*/
 public class Casilla {
 
     public int noCasilla;       // 1-100

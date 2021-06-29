@@ -23,6 +23,9 @@ public class Jugador {
 
     /**
      * Constructor de los Objetos de jugador
+     * @param partidasGanadas
+     * @param nombreJugador
+     * @param partidasPerdidas
      */
     public Jugador(int partidasGanadas, String nombreJugador, int partidasPerdidas) {
 
@@ -38,6 +41,7 @@ public class Jugador {
 
     /**
      * Retorna los Objetos de jugador
+     * @return 
      */
     public String datosJugador() {
 
@@ -48,6 +52,7 @@ public class Jugador {
 
     /**
      * Getters y Setters del Jugador
+     * @return 
      */
 
     public int getPartidasGanadas() {
